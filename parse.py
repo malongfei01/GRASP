@@ -133,7 +133,7 @@ def parser_add_main_args(parser):
     parser.add_argument('--noise', type=float, default=0., help='param for baseline ODIN and Mahalanobis')
     parser.add_argument('--tau1', type=float, default=5, help='threshold to determine s_id and s_ood')
     parser.add_argument('--tau2', type=float, default=50, help='threshold to select train nodes as G')
-    parser.add_argument('--delta', type=float, default=1., help='weight for G')
+    parser.add_argument('--delta', type=float, default=1.02, help='weight for G')
     parser.add_argument('--prop', action='store_true', help='whether to use belief propagation')
     parser.add_argument('--prop_type', type=str, default='naive', choices=['naive', 'highorder', 'appnp', 'gdc', 'graphheat', 'gprgnn', 'mixhop'], help='what prop type to use')
     parser.add_argument('--rw', type=str, default='rw', help='use random walk or symmetric to prop')

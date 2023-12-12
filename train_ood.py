@@ -82,9 +82,7 @@ if args.ood == 'GPN':
 elif args.ood == 'SGCN':
     teacher = parse_method(args, dataset_ind, n, c, d, device)
     model = SGCN(d, c, args, dataset_ind).to(device)
-elif args.ood == 'OODGAT':
-    model = OODGAT(d, args.hidden_dim, c, args.heads, False, args.drop_edge, True,
-                           args.drop_prob, True, args.drop_input).to(device)
+
 dataset_ind.x = dataset_ind.x.to(device)
 dataset_ind.edge_index = dataset_ind.edge_index.to(device)
 dataset_ind.y = dataset_ind.y.to(device)

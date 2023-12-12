@@ -120,23 +120,6 @@ hparams = {
         'gcn2': {'num_layers': 2, 'hidden_channels':64,'gcn2_alpha': 0.1, 'theta': 1.5, 'lr': 0.01, 'weight_decay': 5e-05, 'dropout':0.5},
         'linkx': {'num_layers': 3, 'hidden_channels': 32, 'lr': 0.005, 'weight_decay': 0.01, 'dropout':0.5}
     },
-    'film': {
-        'mlp': {'num_layers': 3, 'hidden_channels': 16}, 
-        'lp': [{'hops': 1, 'alpha': 0.99}, {'hops': 2, 'alpha': 0.99}],
-        'link': {'weight_decay': 0.01},
-        'sgc': [{'hops': 1, 'weight_decay': 0.1}, {'hops': 2, 'weight_decay': 0.01}],
-        'cs': [{'hops': 1, 'A1': 'DAD', 'A2': 'DAD', 'alpha1': 0.0009941088316871463, 'alpha2': 0.013717096209230058}, {'hops': 2, 'A1': 'DAD', 'A2': 'DAD', 'alpha1': 0.5595731211118258, 'alpha2': 0.18806317235672756, 'scale': 1.9354053822310677, 'fixed':True}],
-        'gcn': {'num_layers': 2, 'hidden_channels': 64, 'lr': 0.01, 'dropout': 0.9, 'weight_decay': 0.01},
-        'gat': {'num_layers': 2, 'hidden_channels': 4, 'gat_heads': 8, 'lr': 0.01, 'weight_decay':0.01, 'dropout':0.9},
-        'gcnjk': {'num_layers': 2, 'hidden_channels': 64, 'jk_type': 'max', 'lr': 0.01, 'weight_decay':0.005, 'dropout':0.0},
-        'gatjk': {'num_layers': 2, 'hidden_channels': 12, 'gat_heads': 8, 'jk_type': 'cat', 'lr': 0.005, 'weight_decay':0.01, 'dropout':0.5},
-        'appnp': {'hidden_channels': 16, 'gpr_alpha': 0.5, 'lr': 0.01, 'weight_decay':0.01, 'dropout':0.9},
-        'h2gcn': {'num_layers': 2, 'hidden_channels': 64, 'dropout': 0.9, 'lr': 0.01,'weight_decay':0.005},
-        'mixhop': {'num_layers': 3, 'hidden_channels': 32,'lr': 0.01, 'weight_decay': 0.01, 'dropout':0.9,'hops': 2},
-        'gprgnn': {'hidden_channels': 32, 'gpr_alpha': 0.2, 'lr': 0.01, 'weight_decay': 0.01, 'dropout':0.9},
-        'gcn2': {'num_layers': 8, 'hidden_channels':64,'gcn2_alpha': 0.2, 'theta': 0.5, 'lr': 0.01, 'weight_decay': 0.01, 'dropout':0.5},
-        'linkx': {'num_layers': 3, 'hidden_channels': 256, 'lr': 0.005, 'weight_decay': 1e-05, 'dropout':0.9}
-    },
     'squirrel': {
         'mlp': {'num_layers': 3, 'hidden_channels': 256}, 
         'lp': [{'hops': 1, 'alpha': 0.75}, {'hops': 2, 'alpha': 0.01}],
@@ -154,57 +137,4 @@ hparams = {
         'gcn2': {'num_layers': 2, 'hidden_channels':64,'gcn2_alpha': 0.5, 'theta': 1.5, 'lr': 0.005, 'weight_decay': 5e-05, 'dropout':0.5},
         'linkx': {'num_layers': 1, 'hidden_channels': 64, 'lr': 0.005, 'weight_decay': 0.005, 'dropout':0.5}
     },
-    #bellow to modify the hyperparameter values
-    'cornell': {
-        'mlp': {'num_layers': 3, 'hidden_channels': 256}, 
-        'lp': [{'hops': 1, 'alpha': 0.75}, {'hops': 2, 'alpha': 0.01}],
-        'link': {'weight_decay': 0.001},
-        'sgc': [{'hops': 1, 'weight_decay': 0.001}, {'hops': 2, 'weight_decay': 0.001}],
-        'cs': [{'hops': 1,'A1': 'AD', 'A2': 'DA', 'alpha1': 0.3571971400165756, 'alpha2': 0.8574731781604191, 'scale': 6.710984978278087}, {'hops': 2, 'A1': 'DAD', 'A2': 'DA', 'alpha1': 0.5694114031396995, 'alpha2': 0.8749544103470049}],
-        'gcn': {'num_layers': 2, 'hidden_channels': 64, 'lr': 0.005, 'dropout': 0.9, 'weight_decay': 0.0001},
-        'gat': {'num_layers': 2, 'hidden_channels': 32, 'gat_heads': 8, 'lr': 0.01, 'weight_decay':0.0001, 'dropout':0.9},
-        'gcnjk': {'num_layers': 2, 'hidden_channels': 64, 'jk_type': 'max', 'lr': 0.01, 'weight_decay':5e-05, 'dropout':0.5},
-        'gatjk': {'num_layers': 2, 'hidden_channels': 32, 'gat_heads': 8, 'jk_type': 'max', 'lr': 0.005, 'weight_decay':1e-05, 'dropout':0.5},
-        'appnp': {'hidden_channels': 16, 'gpr_alpha': 0.1, 'lr': 0.005, 'weight_decay':1e-05, 'dropout':0.9},
-        'h2gcn': {'num_layers': 2, 'hidden_channels': 64, 'dropout': 0.5, 'lr': 0.01,'weight_decay':1e-05},
-        'mixhop': {'num_layers': 2, 'hidden_channels': 16, 'lr': 0.01, 'weight_decay': 5e-05, 'dropout':0.9,'hops': 2},
-        'gprgnn': {'hidden_channels': 16, 'gpr_alpha': 0.1, 'lr': 0.01, 'weight_decay': 0.001, 'dropout':0.9},
-        'gcn2': {'num_layers': 2, 'hidden_channels':64,'gcn2_alpha': 0.5, 'theta': 1.5, 'lr': 0.005, 'weight_decay': 5e-05, 'dropout':0.5},
-        'linkx': {'num_layers': 1, 'hidden_channels': 64, 'lr': 0.005, 'weight_decay': 0.005, 'dropout':0.5}
-    },
-    'texas': {
-        'mlp': {'num_layers': 3, 'hidden_channels': 256}, 
-        'lp': [{'hops': 1, 'alpha': 0.75}, {'hops': 2, 'alpha': 0.01}],
-        'link': {'weight_decay': 0.001},
-        'sgc': [{'hops': 1, 'weight_decay': 0.001}, {'hops': 2, 'weight_decay': 0.001}],
-        'cs': [{'hops': 1,'A1': 'AD', 'A2': 'DA', 'alpha1': 0.3571971400165756, 'alpha2': 0.8574731781604191, 'scale': 6.710984978278087}, {'hops': 2, 'A1': 'DAD', 'A2': 'DA', 'alpha1': 0.5694114031396995, 'alpha2': 0.8749544103470049}],
-        'gcn': {'num_layers': 2, 'hidden_channels': 64, 'lr': 0.005, 'dropout': 0.0, 'weight_decay': 5e-05},
-        'gat': {'num_layers': 2, 'hidden_channels': 32, 'gat_heads': 8, 'lr': 0.01, 'weight_decay':0.0001, 'dropout':0.9},
-        'gcnjk': {'num_layers': 2, 'hidden_channels': 64, 'jk_type': 'max', 'lr': 0.01, 'weight_decay':5e-05, 'dropout':0.5},
-        'gatjk': {'num_layers': 2, 'hidden_channels': 32, 'gat_heads': 8, 'jk_type': 'max', 'lr': 0.005, 'weight_decay':1e-05, 'dropout':0.5},
-        'appnp': {'hidden_channels': 16, 'gpr_alpha': 0.1, 'lr': 0.005, 'weight_decay':1e-05, 'dropout':0.9},
-        'h2gcn': {'num_layers': 2, 'hidden_channels': 64, 'dropout': 0.5, 'lr': 0.01,'weight_decay':1e-05},
-        'mixhop': {'num_layers': 2, 'hidden_channels': 32, 'lr': 0.01, 'weight_decay': 0.0001, 'dropout':0.9,'hops': 2},
-        'gprgnn': {'hidden_channels': 16, 'gpr_alpha': 0.1, 'lr': 0.01, 'weight_decay': 0.001, 'dropout':0.9},
-        'gcn2': {'num_layers': 2, 'hidden_channels':64,'gcn2_alpha': 0.5, 'theta': 1.5, 'lr': 0.005, 'weight_decay': 5e-05, 'dropout':0.5},
-        'linkx': {'num_layers': 1, 'hidden_channels': 64, 'lr': 0.005, 'weight_decay': 0.005, 'dropout':0.5}
-    },
-    'wisconsin': {
-        'mlp': {'num_layers': 3, 'hidden_channels': 256}, 
-        'lp': [{'hops': 1, 'alpha': 0.75}, {'hops': 2, 'alpha': 0.01}],
-        'link': {'weight_decay': 0.001},
-        'sgc': [{'hops': 1, 'weight_decay': 0.001}, {'hops': 2, 'weight_decay': 0.001}],
-        'cs': [{'hops': 1,'A1': 'AD', 'A2': 'DA', 'alpha1': 0.3571971400165756, 'alpha2': 0.8574731781604191, 'scale': 6.710984978278087}, {'hops': 2, 'A1': 'DAD', 'A2': 'DA', 'alpha1': 0.5694114031396995, 'alpha2': 0.8749544103470049}],
-        'gcn': {'num_layers': 2, 'hidden_channels': 64, 'lr': 0.01, 'dropout': 0.0, 'weight_decay': 5e-05},
-        'gat': {'num_layers': 2, 'hidden_channels': 32, 'gat_heads': 8, 'lr': 0.01, 'weight_decay':0.0001, 'dropout':0.9},
-        'gcnjk': {'num_layers': 2, 'hidden_channels': 64, 'jk_type': 'max', 'lr': 0.01, 'weight_decay':5e-05, 'dropout':0.5},
-        'gatjk': {'num_layers': 2, 'hidden_channels': 32, 'gat_heads': 8, 'jk_type': 'max', 'lr': 0.005, 'weight_decay':1e-05, 'dropout':0.5},
-        'appnp': {'hidden_channels': 16, 'gpr_alpha': 0.1, 'lr': 0.005, 'weight_decay':1e-05, 'dropout':0.9},
-        'h2gcn': {'num_layers': 2, 'hidden_channels': 64, 'dropout': 0.5, 'lr': 0.01,'weight_decay':1e-05},
-        'mixhop': {'num_layers': 2, 'hidden_channels': 16, 'lr': 0.01, 'weight_decay': 5e-05, 'dropout':0.9,'hops': 2},
-        'gprgnn': {'hidden_channels': 16, 'gpr_alpha': 0.1, 'lr': 0.01, 'weight_decay': 0.001, 'dropout':0.9},
-        'gcn2': {'num_layers': 2, 'hidden_channels':64,'gcn2_alpha': 0.5, 'theta': 1.5, 'lr': 0.005, 'weight_decay': 5e-05, 'dropout':0.5},
-        'linkx': {'num_layers': 1, 'hidden_channels': 64, 'lr': 0.005, 'weight_decay': 0.005, 'dropout':0.5}
-    },
-
 }

@@ -6,7 +6,7 @@ This is the source code for ICLR 2024 paper [Score Propagation as a Catalyst for
 
   - Run scripts/{backbone}_exp.sh to  get pretrained In-distribution model for all datasets except wiki, where {backbone} can be replaced by gcn and h2gcn.
 
-  - Run scripts/{backbone}_saintrw.sh with minibatch to  get pretrained In-distribution model for dataset wiki, where {backbone} can be replaced by gcn and h2gcn.
+  - Run scripts/{backbone}_saintrw.sh with minibatch methods to  get pretrained In-distribution model for very large dataset wiki, where {backbone} can be replaced by gcn and h2gcn.
 
   - After getting pretrained ID models, run scripts/run_post_hoc.sh to evaluate various post-hoc OOD detection methods based on these pretrained ID methods.
 

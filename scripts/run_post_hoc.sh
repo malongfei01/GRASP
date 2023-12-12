@@ -21,7 +21,7 @@ for backbone in "gcn" "h2gcn";do
 	python test_ood.py --dataset cora --device $device --method $backbone --ood KNN --runs 5 --prop
 	python test_ood.py --dataset cora --device $device --method $backbone --ood KNN --runs 5 --grasp
 	python test_ood.py --dataset cora --device $device --method $backbone --ood GNNSafe --runs 5
-	python test_ood.py --dataset cora --device $device --method $backbone --ood GRASP --delta 1.02 --runs 5
+	python test_ood.py --dataset cora --device $device --method $backbone --ood GRASP --runs 5
 done
 
 # amazon-photo with different OOD methods
@@ -43,7 +43,7 @@ for backbone in "gcn" "h2gcn";do
 	python test_ood.py --dataset amazon-photo --device $device --method $backbone --ood KNN --runs 5 --prop
 	python test_ood.py --dataset amazon-photo --device $device --method $backbone --ood KNN --runs 5 --grasp
 	python test_ood.py --dataset amazon-photo --device $device --method $backbone --ood GNNSafe --runs 5
-	python test_ood.py --dataset amazon-photo --device $device --method $backbone --ood GRASP --delta 1.02 --runs 5
+	python test_ood.py --dataset amazon-photo --device $device --method $backbone --ood GRASP --runs 5
 done
 
 
@@ -66,7 +66,7 @@ for backbone in "gcn" "h2gcn";do
 	python test_ood.py --dataset coauthor-cs --device $device --method $backbone --ood KNN --runs 5 --prop
 	python test_ood.py --dataset coauthor-cs --device $device --method $backbone --ood KNN --runs 5 --grasp
 	python test_ood.py --dataset coauthor-cs --device $device --method $backbone --ood GNNSafe --runs 5
-	python test_ood.py --dataset coauthor-cs --device $device --method $backbone --ood GRASP --delta 1.02 --runs 5
+	python test_ood.py --dataset coauthor-cs --device $device --method $backbone --ood GRASP --runs 5
 done
 
 
@@ -89,7 +89,7 @@ for backbone in "gcn" "h2gcn";do
 	python test_ood.py --dataset chameleon --device $device --method $backbone --ood KNN --runs 5 --prop
 	python test_ood.py --dataset chameleon --device $device --method $backbone --ood KNN --runs 5 --grasp
 	python test_ood.py --dataset chameleon --device $device --method $backbone --ood GNNSafe --runs 5
-	python test_ood.py --dataset chameleon --device $device --method $backbone --ood GRASP --delta 1.2 --runs 5
+	python test_ood.py --dataset chameleon --device $device --method $backbone --ood GRASP --runs 5
 done
 
 
@@ -112,7 +112,7 @@ for backbone in "gcn" "h2gcn";do
 	python test_ood.py --dataset squirrel --device $device --method $backbone --ood KNN --runs 5 --prop
 	python test_ood.py --dataset squirrel --device $device --method $backbone --ood KNN --runs 5 --grasp
 	python test_ood.py --dataset squirrel --device $device --method $backbone --ood GNNSafe --runs 5
-	python test_ood.py --dataset squirrel --device $device --method $backbone --ood GRASP --delta 1.2 --runs 5
+	python test_ood.py --dataset squirrel --device $device --method $backbone --ood GRASP --runs 5
 done
 
 

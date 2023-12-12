@@ -8,9 +8,9 @@ This is the source code for ICLR 2024 paper [Score Propagation as a Catalyst for
 
   - Run scripts/{backbone}_saintrw.sh with minibatch to  get pretrained In-distribution model for dataset wiki, where {backbone} can be replaced by gcn and h2gcn.
 
-  - After training ID models, run scripts/run_post_hoc.sh to evaluate various post-hoc OOD detection methods based on these pretrained ID models.
+  - After getting pretrained ID models, run scripts/run_post_hoc.sh to evaluate various post-hoc OOD detection methods based on these pretrained ID methods.
 
   
 **2. Training-based Methods**
 
-- We provide implementations of three training-based methods: GKDE, GPN and OODGAT in scripts/run_training_based.sh, which need to be trained from scratch.
+- We provide implementations of three training-based methods in the literature: GKDE, GPN and OODGAT in scripts/run_training_based.sh, where these methods need to be trained from scratch.

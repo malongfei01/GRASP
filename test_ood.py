@@ -172,8 +172,6 @@ for run in range(args.runs):
         # not calculate online, but use precomputed metrics for all data
         # ckpt = f'{save_dir}/{args.method}-{run}.pt'
         # selected_nodes = select_nodes_from_metric(torch.concat([split_idx['train'], split_idx['valid']]), ckpt)
-            
-        edge_index = to_undirected(edge_index)
         scores = propagation_grasp(scores.to(device), edge_index, selected_nodes, alpha=args.alpha, K=args.K, delta=args.delta)
     elif args.prop:
         # naive

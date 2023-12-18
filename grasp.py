@@ -33,7 +33,7 @@ class GRASP():
         d_add = torch.zeros(N, dtype=d.dtype, device=d.device)
         d_add[add_nodes] = len(add_nodes)
         d += d_add
-        d_inv = 1. / d
+        d_inv = 1. / d.unsqueeze(1)
         d_inv = torch.nan_to_num(d_inv, nan=0.0, posinf=0.0, neginf=0.0)
         d_norm = 1. / d[col]
         value = torch.ones_like(row) * d_norm
@@ -42,9 +42,8 @@ class GRASP():
         adj = adj.to_device(e.device)
         d_inv = d_inv.type(e.dtype)
         d_inv = d_inv.to(e.device)
-        e_add = torch.zeros(N, dtype=e.dtype, device=e.device)
+        e_add = torch.zeros(N, 1, dtype=e.dtype, device=e.device)
         for _ in range(K):
             e_add[add_nodes] =  e[add_nodes].sum()*d_inv[add_nodes]
-            e_add = e_add.unsqueeze(1)
             e = e * alpha + (matmul(adj, e)+delta*e_add) * (1 - alpha)
         return e.squeeze(1)
